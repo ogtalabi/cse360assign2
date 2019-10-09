@@ -10,32 +10,41 @@ public class AddingMachine {
 
 
 	private int total;
+	private String operations="0" ;
 
 	public AddingMachine () //class constructor to instantiate total to a value
 	{
 		total = 0;  // not needed - included for clarity
+		
 	}
 
 	public int getTotal () // @return the current total
 	{
-		return 0; //@returns the value of total
+		return total; //@returns the value of total
 	}
 
 	public void add (int value) //method used to add the values together into total
 	{
+		total = total + value;
+		
+		operations = operations +" + " + value;
 	}
 
 	public void subtract (int value) //subtract the parameter from the total variable
 	{
+		total = total - value;
+		
+		operations = operations +" - " + value;
 	}
 
 	public String toString () //@returns the operations performed as a string.
 	{
-		return "";//@returns at string of operations 
+		return operations;//@returns at string of operations 
 	}
 
 	public void clear() //resets the values of the parameters and total
 	{
+		operations = "0";
 	}
 
 }
